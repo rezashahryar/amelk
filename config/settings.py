@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
     'profiles.apps.ProfilesConfig',
+    'real_state.apps.RealStateConfig',
 ]
 
 MIDDLEWARE = [

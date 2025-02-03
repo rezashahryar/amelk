@@ -17,3 +17,7 @@ class FaqPageView(generic.TemplateView):
 
 class PrivacyPageView(generic.TemplateView):
     template_name = 'pages/privacy.html'
+
+
+class OurServicesPageView(generic.TemplateView):
+    template_name = 'pages/our_services.html'
