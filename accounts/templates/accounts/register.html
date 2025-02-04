@@ -20,11 +20,11 @@
   </div>
 {% endif %} {% endcomment %}
 
-<h2>فرم ثبت‌نام</h2>
+<h2>فرم ثبت‌ نام</h2>
 <form method="POST" action="#">
   {% csrf_token %}
   <label for="mobile">شماره موبایل</label>
-  <input type="text" name="phone_number" id="mobile" placeholder="شماره موبایل" required>
+  <input type="text" name="mobile" id="mobile" placeholder="شماره موبایل" required>
   
   <label for="email">ایمیل</label>
   <input type="email" name="email" id="email" placeholder="ایمیل" required>
@@ -38,7 +38,7 @@
   <button type="submit" class="button">ثبت‌نام</button>
   
   <p class="form-footer">
-      قبلاً ثبت‌نام کرده‌اید؟ <a href="#">ورود</a>
+      قبلاً ثبت‌نام کرده‌اید؟ <a href="{% url "accounts:login" %}">ورود</a>
   </p>
 </form>
 

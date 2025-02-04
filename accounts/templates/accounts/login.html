@@ -22,15 +22,17 @@
   <form method="POST" action="#">
       {% csrf_token %}
       <label for="mobile">شماره موبایل</label>
-      <input type="text" name="phone_number" id="mobile" placeholder="شماره موبایل" required>
-      
+      <input type="text" name="mobile" id="mobile" placeholder="شماره موبایل" required>
+      {% for error in form.mobile.errors %}
+        <p class="alert alert-danger">{{ error }}</p>
+      {% endfor %}
       <label for="password">رمز عبور</label>
       <input type="password" name="password" id="password" placeholder="رمز عبور" required>
       
       <button type="submit" id="loginBtn">ورود</button>
       
       <p class="form-footer">
-          ثبت‌نام نکرده‌اید؟ <a href="#">ثبت‌نام</a>
+          ثبت‌نام نکرده‌اید؟ <a href="{% url "accounts:register" %}">ثبت‌ نام</a>
       </p>
   </form>
   
